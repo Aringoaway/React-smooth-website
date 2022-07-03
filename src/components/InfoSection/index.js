@@ -3,7 +3,7 @@ import {Button} from "../ButtonElement";
 import {
 	InfoContainer, InfoWrapper, InfoRow,
 	Column1, TextWrapper, TopLine,
-	Heading, SubTitle, BtnWrap,
+	Heading, Subtitle, BtnWrap,
 	Column2, ImgWrap, Img
 } from "./InfoElements"
 
@@ -19,7 +19,7 @@ const InfoSection = ({ lightBg, id, imgStart, topLine,
 							<TextWrapper>
 								<TopLine>{topLine}</TopLine>
 								<Heading lightText={lightText}>{headline}</Heading>
-								<SubTitle dartText={darkText}>{description}</SubTitle>
+								<Subtitle darkText={darkText}>{description} {console.log(darkText)}</Subtitle>
 								<BtnWrap>
 									<Button
 										to="home"
@@ -28,9 +28,9 @@ const InfoSection = ({ lightBg, id, imgStart, topLine,
 										spy={true}
 										exact="true"
 										offset={-80}
-										primary={primary ? 'true' : 'false'}
-										dark={dark ? 'true' : 'false'}
-										dark2={dark2 ? 'true' : 'false'}
+										primary={primary ? 1 : 0}
+										dark={dark ? 1 : 0}
+										dark2={dark2 ? 1 : 0}
 									>
 										{buttonLabel}
 									</Button>
